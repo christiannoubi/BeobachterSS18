@@ -1,8 +1,7 @@
-#pragma once
-
 #include <vector>
 #include <iostream>
 #include <string>
+#include <sstream>
 using namespace std;
 
 class Nachricht {
@@ -15,9 +14,9 @@ public:
 
     }
     string text () const {
-        /*stringstream ss;
-            ss << "Hallo Nachricht " << endl;
-        return ss.str();*/
+        stringstream ss;
+            ss << s ;
+        return ss.str();
     }
 
 };
@@ -42,7 +41,7 @@ public:
 
     }
     virtual void benachrichtigen (const Nachricht& nachricht) const {
-        std:: cout << this->name << "empfaeng Nachricht: " << nachricht.text() <<std:: endl;
+        std:: cout << "empfaeng Nachricht: " << nachricht.text() <<std:: endl;
     }
 };
 
